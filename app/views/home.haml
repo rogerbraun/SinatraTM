@@ -1,0 +1,21 @@
+%h1 SimpleTM 
+%h2 Übersetzung hinzufügen
+%form{:action => "/translation", :method => "post"}
+  Quellsprache
+  %br/
+  %input{:name => "source", :type => "text"}
+  %br/
+  Zielsprache
+  %br/
+  %input{:name => "target", :type => "text"}
+  %br/
+  %button Hinzufügen
+
+
+%h2 Suchen
+%form{:action => "/fuzzy", :method => "get"}
+  Quellsprache:
+  %br/
+  %input{:name => "q", :type => "text"}
+  %br
+  %button Suchen
