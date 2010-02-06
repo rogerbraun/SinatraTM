@@ -1,0 +1,19 @@
+defaults: &defaults
+  :log_level: warn
+
+
+:development:
+  :sqlite3:
+    :adapter: sqlite3
+    :database: db/development.sqlite3
+    <<: *defaults
+ 
+:test:
+  :sqlite3:
+    :database: db/test.sqlite3
+    <<: *defaults
+ 
+:production:
+  :sqlite3:
+    :database: db/production.sqlite3
+    <<: *defaults
